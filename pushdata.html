@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<title>t-PUSH 관리</title>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="wrap-header">
+				<div class="header">
+					<h1>t-PUSH 관리</h1>
+					<ul class="nav none">
+						<li><a href="pushlist.html" class="on">발송메세지 현황</a></li>
+						<li><a href="pushstats-day.html">발송 통계</a></li>
+						<li><a href="userlist.html">계정 관리</a></li>
+						<li><a href="applist.html">App 관리</a></li>
+					</ul>
+					<div class="wrap-user">
+						<div class="user mr20" onclick="location.href='edituser.html'">사용자명</div>
+						<div class="logout" onclick="location.href='login.html'">로그아웃</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrap-content">
+				<div class="content">
+					<h2>발송메세지 현황 > 상세정보</h2>
+					<div>
+						<table class="data">
+							<colgroup>
+								<col class="td8" />
+								<col class="td9" />
+							</colgroup>
+							<tr>
+								<td>번호</td>
+								<td>123456789</td>
+							</tr>
+							<tr>
+								<td>App</td>
+								<td>흥국화재 사우찾기</td>
+							</tr>
+							<tr>
+								<td>제목</td>
+								<td>푸시발송 테스트</td>
+							</tr>
+							<tr>
+								<td>내용</td>
+								<td>
+									푸시 발송된 내용입니다. 공지사항에서 확인해 주세요.푸시 발송된 내용입니다. 공지사항에서 확인해 주세요.푸시 발송된 내용입니다. 공지사항에서 확인해 주세요.푸시 발송된 내용입니다.
+									공지사항에서 확인해 주세요. 푸시 발송된 내용입니다. 공지사항에서 확인해 주세요.푸시 발송된 내용입니다. 공지사항에서 확인해 주세요.
+								</td>
+							</tr>
+							<tr>
+								<td>발송 여부</td>
+								<td>발송</td>
+							</tr>
+							<tr>
+								<td>요청일시</td>
+								<td>2021-10-20 11:56:55</td>
+							</tr>
+							<tr>
+								<td>발송일시</td>
+								<td>2021-10-20 11:56:58</td>
+							</tr>
+							<tr>
+								<td>OS 정보</td>
+								<td>Android</td>
+							</tr>
+						</table>
+					</div>
+					<div class="wrap-btn-fe"><button class="normal" onclick="location.href='pushlist.html'">목록보기</button></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

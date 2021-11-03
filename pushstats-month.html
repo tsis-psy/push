@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<title>t-PUSH 관리</title>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="wrap-header">
+				<div class="header">
+					<h1>t-PUSH 관리</h1>
+					<ul class="nav none">
+						<li><a href="pushlist.html">발송메세지 현황</a></li>
+						<li><a href="pushstats-day.html" class="on">발송 통계</a></li>
+						<li><a href="userlist.html">계정 관리</a></li>
+						<li><a href="applist.html">App 관리</a></li>
+					</ul>
+					<div class="wrap-user">
+						<div class="user mr20" onclick="location.href='edituser.html'">사용자명</div>
+						<div class="logout" onclick="location.href='login.html'">로그아웃</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrap-content">
+				<div class="content">
+					<h2>발송 통계</h2>
+					<div class="wrap-select">
+						<h3>App 선택</h3>
+						<div>
+							<select class="mr10">
+								<option>소속 선택</option>
+								<option>티시스</option>
+								<option>흥국화재</option>
+								<option>AIA생명</option>
+							</select>
+							<select>
+								<option>App 선택</option>
+								<option>태평소</option>
+								<option>Smart Office</option>
+								<option>t-Store</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="wrap-summary mt30">
+						<div class="summary-header">
+							<h3>통계 요약</h3>
+							<div class="pickdate">
+								<div class="period">
+									<a href="pushstats-day.html">일간</a>
+									<a href="#" class="on">월간</a>
+								</div>
+								<div class="picked"><input type="month" id="currnetMonth" /></div>
+							</div>
+						</div>
+						<table class="summary">
+							<colgroup>
+								<col class="td10" />
+								<col class="td11" />
+								<col class="td12" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>구분</th>
+									<th>기간 내 전체(건)</th>
+									<th>전월 대비 증감율(%)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>발송 수</td>
+									<td>7845</td>
+									<td>12%</td>
+								</tr>
+								<tr>
+									<td>발송성공 수</td>
+									<td>7845</td>
+									<td>12%</td>
+								</tr>
+								<tr>
+									<td>발송실패 수</td>
+									<td>7845</td>
+									<td>12%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="wrap-chart">
+						<h3>발송량 그래프</h3>
+						<div>
+							<div id="curve_chart" style="width: 100%; height: 450px"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+			google.charts.load('current', { packages: ['corechart'] });
+			google.charts.setOnLoadCallback(drawChart);
+
+			function drawChart() {
+				var data = google.visualization.arrayToDataTable([
+					['day', '전체발송 수', { role: 'annotation' }, '발송성공', { role: 'annotation' }, '발송실패', { role: 'annotation' }],
+					['2020-11', 1000, 1000, 400, 400, 10, 10],
+					['2020-12', 1170, 1170, 460, 460, 12, 12],
+					['2021-01', 1660, 1660, 1120, 1120, 8, 8],
+					['2021-02', 1030, 1030, 540, 540, 6, 6],
+					['2021-03', 1000, 1000, 400, 400, 10, 10],
+					['2021-04', 1170, 1170, 460, 460, 12, 12],
+					['2021-05', 1660, 1660, 1120, 1120, 8, 8],
+					['2021-06', 1030, 1030, 540, 540, 6, 6],
+					['2021-07', 1000, 1000, 400, 400, 10, 10],
+					['2021-08', 1170, 1170, 460, 460, 12, 12],
+					['2021-09', 1660, 1660, 1120, 1120, 8, 8],
+					['2021-10', 1030, 1030, 540, 540, 6, 6],
+				]);
+
+				var options = {
+					//title: 'Company Performance',
+					curveType: 'none',
+					legend: { position: 'top', alignment: 'center' },
+					chartArea: { left: 70, top: 60, right: 0, bottom: 50 },
+					pointVisible: true,
+					pointShape: 'circle',
+					pointSize: '10',
+					colors: ['rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(201, 203, 207)'],
+					annotations: {
+						textStyle: {
+							fontSize: 12,
+							bold: false,
+							color: '#000',
+						},
+					},
+				};
+
+				var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+				chart.draw(data, options);
+			}
+		</script>
+		<script type="text/javascript">
+			document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10); //오늘날짜기본세팅
+		</script>
+		<script type="text/javascript">
+			document.getElementById('currnetMonth').value = new Date().toISOString().slice(0, 7); //당월기본세팅
+		</script>
+	</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+		<title>t-PUSH 관리</title>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="wrap-header">
+				<div class="header">
+					<h1>t-PUSH 관리</h1>
+					<ul class="nav none">
+						<li><a href="pushlist.html" class="on">발송메세지 현황</a></li>
+						<li><a href="pushstats-day.html">발송 통계</a></li>
+						<li><a href="userlist.html">계정 관리</a></li>
+						<li><a href="applist.html">App 관리</a></li>
+					</ul>
+					<div class="wrap-user">
+						<div class="user mr20" onclick="location.href='edituser.html'">사용자명</div>
+						<div class="logout" onclick="location.href='login.html'">로그아웃</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrap-content">
+				<div class="content">
+					<h2>발송메세지 현황</h2>
+					<div class="wrap-select mb30">
+						<h3>App 선택</h3>
+						<div>
+							<select class="mr10">
+								<option>소속 선택</option>
+								<option>티시스</option>
+								<option>흥국화재</option>
+								<option>AIA생명</option>
+							</select>
+							<select>
+								<option>App 선택</option>
+								<option>태평소</option>
+								<option>Smart Office</option>
+								<option>t-Store</option>
+							</select>
+						</div>
+					</div>
+					<div class="wrap-srch">
+						<input type="text" placeholder="검색어 입력" />
+						<input type="date" value="날짜선택" /> ~ <input type="date" value="날짜선택" />
+						<button class="normal">검색</button>
+					</div>
+					<div class="wrap-list">
+						<div class="list-num">16건</div>
+						<div>
+							<table>
+								<colgroup>
+									<col class="td1" />
+									<col class="td2" />
+									<col class="td3" />
+									<col class="td4" />
+									<col class="td5" />
+									<col class="td6" />
+									<col class="td7" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th><input type="checkbox" /></th>
+										<th>번호</th>
+										<th>발송내용</th>
+										<th>OS</th>
+										<th>발송 여부</th>
+										<th>발송 일시</th>
+										<th>상세</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>12345</td>
+										<td><a class="txt">푸시 발송된 내용입니다. 푸시 발송된 내용입니다. 푸시 발송된 내용입니다.푸시 발송된 내용입니다. 푸시 발송된 내용입니다.</a></td>
+										<td>Android</td>
+										<td>발송</td>
+										<td>2021-08-05 12:00</td>
+										<td><button onclick="location.href='pushdata.html'">더보기</button></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>12345</td>
+										<td><a class="txt">푸시 발송된 내용입니다. 푸시 발송된 내용입니다. 푸시 발송된 내용입니다.푸시 발송된 내용입니다. 푸시 발송된 내용입니다.</a></td>
+										<td>Android</td>
+										<td>발송</td>
+										<td>2021-08-05 12:00</td>
+										<td><button onclick="location.href='pushdata.html'">더보기</button></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>12345</td>
+										<td><a class="txt">푸시 발송된 내용입니다. 푸시 발송된 내용입니다. 푸시 발송된 내용입니다.푸시 발송된 내용입니다. 푸시 발송된 내용입니다.</a></td>
+										<td>Android</td>
+										<td>발송</td>
+										<td>2021-08-05 12:00</td>
+										<td><button onclick="location.href='pushdata.html'">더보기</button></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>12345</td>
+										<td><a class="txt">푸시 발송된 내용입니다. 푸시 발송된 내용입니다. 푸시 발송된 내용입니다.푸시 발송된 내용입니다. 푸시 발송된 내용입니다.</a></td>
+										<td>Android</td>
+										<td>발송</td>
+										<td>2021-08-05 12:00</td>
+										<td><button onclick="location.href='pushdata.html'">더보기</button></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>12345</td>
+										<td><a class="txt">푸시 발송된 내용입니다. 푸시 발송된 내용입니다. 푸시 발송된 내용입니다.푸시 발송된 내용입니다. 푸시 발송된 내용입니다.</a></td>
+										<td>Android</td>
+										<td>발송</td>
+										<td>2021-08-05 12:00</td>
+										<td><button onclick="location.href='pushdata.html'">더보기</button></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>12345678900</td>
+										<td><a class="txt">푸시 발송된 내용입니다. 푸시 발송된 내용입니다. 푸시 발송된 내용입니다.푸시 발송된 내용입니다. 푸시 발송된 내용입니다.</a></td>
+										<td>Android</td>
+										<td>발송</td>
+										<td>2021-08-05 12:00</td>
+										<td><button onclick="location.href='pushdata.html'">더보기</button></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>12345</td>
+										<td><a class="txt">푸시 발송된 내용입니다. 푸시 발송된 내용입니다. 푸시 발송된 내용입니다.푸시 발송된 내용입니다. 푸시 발송된 내용입니다.</a></td>
+										<td>Android</td>
+										<td>발송</td>
+										<td>2021-08-05 12:00</td>
+										<td><button onclick="location.href='pushdata.html'">더보기</button></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>12345</td>
+										<td><a class="txt">푸시 발송된 내용입니다. 푸시 발송된 내용입니다. 푸시 발송된 내용입니다.푸시 발송된 내용입니다. 푸시 발송된 내용입니다.</a></td>
+										<td>Android</td>
+										<td>발송</td>
+										<td>2021-08-05 12:00</td>
+										<td><button onclick="location.href='pushdata.html'">더보기</button></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>12345</td>
+										<td><a class="txt">푸시 발송된 내용입니다. 푸시 발송된 내용입니다. 푸시 발송된 내용입니다.푸시 발송된 내용입니다. 푸시 발송된 내용입니다.</a></td>
+										<td>Android</td>
+										<td>발송</td>
+										<td>2021-08-05 12:00</td>
+										<td><button onclick="location.href='pushdata.html'">더보기</button></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>12345</td>
+										<td><a class="txt">푸시 발송된 내용입니다. 푸시 발송된 내용입니다. 푸시 발송된 내용입니다.푸시 발송된 내용입니다. 푸시 발송된 내용입니다.</a></td>
+										<td>Android</td>
+										<td>발송</td>
+										<td>2021-08-05 12:00</td>
+										<td><button onclick="location.href='pushdata.html'">더보기</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="wrap-btn"><button class="excel">엑셀 다운로드</button></div>
+					<div class="wrap-paging">
+						<div class="paging">
+							<ul class="none">
+								<li><span>이전</span></li>
+								<li class="on"><span>1</span></li>
+								<li><span>2</span></li>
+								<li><span>3</span></li>
+								<li><span>4</span></li>
+								<li><span>5</span></li>
+								<li><span>6</span></li>
+								<li><span>7</span></li>
+								<li><span>8</span></li>
+								<li><span>9</span></li>
+								<li><span>10</span></li>
+								<li><span>다음</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

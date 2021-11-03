@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<title>t-PUSH 관리</title>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="wrap-header">
+				<div class="header">
+					<h1>t-PUSH 관리</h1>
+					<ul class="nav none">
+						<li><a href="pushlist.html">발송메세지 현황</a></li>
+						<li><a href="pushstats-day.html">발송 통계</a></li>
+						<li><a href="userlist.html">계정 관리</a></li>
+						<li><a href="applist.html" class="on">App 관리</a></li>
+					</ul>
+					<div class="wrap-user">
+						<div class="user mr20" onclick="location.href='edituser.html'">사용자명</div>
+						<div class="logout" onclick="location.href='login.html'">로그아웃</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrap-content">
+				<div class="content">
+					<h2>App 현황 > App 등록</h2>
+					<div>
+						<table class="data">
+							<colgroup>
+								<col class="td13" />
+								<col class="td9" />
+							</colgroup>
+							<tr>
+								<td>App 이름</td>
+								<td><input type="text" placeholder="이름" /></td>
+							</tr>
+							<tr>
+								<td>App 설명</td>
+								<td><input type="text" placeholder="ID" /></td>
+							</tr>
+
+							<tr>
+								<td>소속</td>
+								<td>
+									<div class="wrap-select">
+										<select>
+											<option>티시스</option>
+											<option>흥국생명</option>
+											<option>흥국화재</option>
+											<option>태광산업</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>OS 정보</td>
+								<td>
+									<div>
+										<span class="mr10">
+											<input type="checkbox" id="android" />
+											<label for="android">Android</label>
+										</span>
+										<span>
+											<input type="checkbox" id="ios" />
+											<label for="ios">iOS</label>
+										</span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>iOS 정보</td>
+								<td><input type="text" class="w600" /></td>
+							</tr>
+							<tr>
+								<td>Android 정보</td>
+								<td><input type="text" class="w600" /></td>
+							</tr>
+						</table>
+					</div>
+					<div class="wrap-btn-sb">
+						<button class="edit mr10">등록</button>
+						<button class="normal" onclick="location.href='applist.html'">목록보기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
