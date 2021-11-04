@@ -316,13 +316,13 @@ a.txt {
 
 .wrap-paging {
 	width: 100%;
-	text-align: center;
+	display: flex;
+	justify-content: center;
 }
 
-.paging {
-	width: fit-content;
-	margin: 0 auto;
-}
+/* .paging {
+	
+} */
 
 .paging ul {
 	display: flex;
